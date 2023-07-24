@@ -1,0 +1,36 @@
+java.lang.AssertionError: assertion failed: NoType
+occurred in the presentation compiler.
+
+action parameters:
+offset: 314
+uri: file://<HOME>/Desktop/2nd%20Year%20Semester%20I/Functional%20Programming/Scala/Tutorial%2006/Q01.scala
+text:
+import scala.io.StdIn
+
+def main(args:Array[String]) : Unit = {
+    print("Enter the text: ")
+    var text = StdIn.readLine()
+    print("Enter the shift: ")
+    val shift = StdIn.readInt()
+    EncryptedText(text, shift)
+}
+
+def EncryptedText(text:String, shift:Int): String = {
+    val encrypt = text.map {
+        c@@
+    }
+}
+
+
+error stacktrace:
+scala.runtime.Scala3RunTime$.assertFailed(Scala3RunTime.scala:8)
+	dotty.tools.dotc.core.Types$TypeBounds.<init>(Types.scala:5097)
+	dotty.tools.dotc.core.Types$AliasingBounds.<init>(Types.scala:5176)
+	dotty.tools.dotc.core.Types$TypeAlias.<init>(Types.scala:5198)
+	dotty.tools.dotc.core.Types$TypeAlias$.apply(Types.scala:5231)
+	dotty.tools.dotc.core.Types$Type.bounds(Types.scala:1729)
+	scala.meta.internal.pc.completions.CaseKeywordCompletion$.contribute(MatchCaseCompletions.scala:154)
+	scala.meta.internal.pc.completions.Completions.advancedCompletions(Completions.scala:429)
+	scala.meta.internal.pc.completions.Completions.completions(Completions.scala:176)
+	scala.meta.internal.pc.completions.CompletionProvider.completions(CompletionProvider.scala:86)
+	scala.meta.internal.pc.ScalaPresentationCompiler.complete$$anonfun$1(ScalaPresentationCompiler.scala:119)

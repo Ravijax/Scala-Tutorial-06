@@ -1,0 +1,12 @@
+id: file://<HOME>/Desktop/2nd%20Year%20Semester%20I/Functional%20Programming/Scala/Tutorial%2006/Q01.scala:[138..138) in Input.VirtualFile("file://<HOME>/Desktop/2nd%20Year%20Semester%20I/Functional%20Programming/Scala/Tutorial%2006/Q01.scala", "import scala.io.StdIn
+
+def main(args:Array[String]) : Unit = {
+    print("Enter the text: ")
+    var plaintext = StdIn.readLine()
+
+}
+
+def ")
+file://<HOME>/Desktop/2nd%20Year%20Semester%20I/Functional%20Programming/Scala/Tutorial%2006/Q01.scala:9: error: expected identifier; obtained eof
+def 
+    ^
