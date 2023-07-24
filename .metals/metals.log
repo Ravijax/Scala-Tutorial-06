@@ -553,3 +553,72 @@ WARNING: Unmatched cancel notification for request id 1538
 2023.07.25 00:23:41 INFO  time: compiled project_bd2c96d2de in 1.2s
 Jul 25, 2023 12:24:24 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+Jul 25, 2023 12:26:19 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "git:/Users/ravija/Desktop/2nd%20Year%20Semester%20I/Functional%20Programming/Scala/Tutorial%2006/Q01.scala?%7B%22path%22%3A%22%2FUsers%2Fravija%2FDesktop%2F2nd%20Year%20Semester%20I%2FFunctional%20Programming%2FScala%2FTutorial%2006%2FQ01.scala%22%2C%22ref%22%3A%22%22%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "git" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:184)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:631)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:628)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:604)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 16 more
+
+2023.07.25 00:27:00 INFO  Shutting down server
+2023.07.25 00:27:00 INFO  shutting down Metals
+2023.07.25 00:27:01 INFO  Shut down connection with build server.
+2023.07.25 00:27:00 INFO  Exiting server
+2023.07.25 00:29:35 INFO  Started: Metals version 1.0.0 in folders '/Users/ravija/Desktop/2nd Year Semester I/Functional Programming/Scala/Tutorial 06' for client Visual Studio Code 1.80.1.
+Jul 25, 2023 12:29:36 AM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.20.1 by Redgate
+Jul 25, 2023 12:29:36 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+Jul 25, 2023 12:29:36 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+Jul 25, 2023 12:29:36 AM org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:/Users/ravija/Desktop/2nd Year Semester I/Functional Programming/Scala/Tutorial 06/.metals/metals (H2 2.1)
+Jul 25, 2023 12:29:36 AM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.022s)
+Jul 25, 2023 12:29:36 AM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+Jul 25, 2023 12:29:36 AM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.07.25 00:29:36 INFO  time: initialize in 0.74s
+2023.07.25 00:29:42 INFO  Attempting to connect to the build server...
+2023.07.25 00:29:42 WARN  No build session currently active to reload.
+2023.07.25 00:29:42 INFO  Running BSP server List(/Users/ravija/Library/Application Support/Coursier/bin/.scala-cli.aux, bsp, --json-options, /Users/ravija/Desktop/2nd Year Semester I/Functional Programming/Scala/Tutorial 06/.scala-build/ide-options-v2.json, /Users/ravija/Desktop/2nd Year Semester I/Functional Programming/Scala/Tutorial 06)
+2023.07.25 00:29:42 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/ravija/Desktop/2nd Year Semester I/Functional Programming/Scala/Tutorial 06/.metals/bsp.trace.json or /Users/ravija/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.07.25 00:29:44 INFO  time: Connected to build server in 1.91s
+2023.07.25 00:29:44 INFO  Connected to Build server: scala-cli v1.0.1
+2023.07.25 00:29:49 INFO  no build target found for /Users/ravija/Desktop/2nd Year Semester I/Functional Programming/Scala/Tutorial 06/Q01.scala. Using presentation compiler with project's scala-library version: 3.3.0
+2023.07.25 00:29:49 INFO  time: code lens generation in 7.59s
+2023.07.25 00:29:49 INFO  time: Imported build in 0.33s
+2023.07.25 00:29:54 INFO  time: indexed workspace in 4.99s
